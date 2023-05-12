@@ -33,3 +33,14 @@ The client connects to the server running on `localhost` at port 8080. It sends 
 3. Enter a request in the client terminal and observe the server's response.
 4. Try different requests to see how the client and server interact (***implemented example: `hello`***)
 5. Press Ctrl+C in both terminals to stop the client and server.
+
+## Running tests
+
+```bash
+sudo chmod +x ./run_tests.sh
+./run_tests.sh
+```
+
+## Conclusion
+
+This implementation provides a basic demonstration of the Client-Server pattern in Python. The server and client components are separate entities that communicate over a network connection. The code can be extended and customized to meet specific requirements.
