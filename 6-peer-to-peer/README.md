@@ -44,6 +44,13 @@ if __name__ == '__main__':
 ```
 In this example, three peers (`peer1`, `peer2`, `peer3`) are created and connections are established between them. Messages are sent between peers using the `send_message` method. Peers can also be disconnected using the `disconnect` method.
 
+## Running tests
+
+```bash
+sudo chmod +x ./run_tests.sh
+./run_tests.sh
+```
+
 ## Advantages
 
 - Decentralization: The Peer-to-Peer pattern eliminates the need for a central server, enabling peers to communicate directly with each other.
