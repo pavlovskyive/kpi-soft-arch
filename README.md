@@ -8,6 +8,7 @@ This repository contains an implementation of various software architecture patt
 2. [**Client-Server Pattern:**](2-client-server) The codebase demonstrates the Client-Server pattern, enabling communication and data exchange between clients and a central server.
 3. [**Master-Slave Pattern:**](3-master-slave) A pattern where a master component delegates tasks to one or more slave components for parallel processing.
 4. [**Pipe-Filter Pattern:**](4-pipe-filter) A pattern, which processes data sequentially through a series of filters connected by pipes, allowing for modular and reusable data transformations.
+5. [**Broker Pattern:**](5-broker) A pattern, which involves a central broker acting as an intermediary for communication and coordination between components. It allows publishers to send messages to specific topics and delivers those messages to subscribers interested in those topics.
 
 ## Usage
 
