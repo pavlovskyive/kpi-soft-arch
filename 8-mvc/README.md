@@ -30,6 +30,13 @@ python mvc.py
 
 The program will prompt you to enter data. Enter any value you like, and it will update and display the data. To quit the program, simply enter 'q'.
 
+## Running tests
+
+```bash
+sudo chmod +x ./run_tests.sh
+./run_tests.sh
+```
+
 ## Benefits of MVC
 
 - Separation of concerns: The separation of Model, View, and Controller components enables independent development and maintenance of each component.
