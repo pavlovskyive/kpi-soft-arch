@@ -1,20 +1,16 @@
-from slave import process_task
+from slave import Slave
 
 
-def start_master():
-    tasks = ["Task 1", "Task 2", "Task 3"]
-    results = []
+class Master:
+    def process(self, tasks):
+        print("Master started.")
 
-    print("Master started.")
+        results = []
+        for task in tasks:
+            # Create a new instance of the Slave class for each task
+            slave = Slave()
+            result = slave.process_task(task)
+            results.append(result)
 
-    for task in tasks:
-        # Delegate task to a slave
-        result = process_task(task)
-        results.append(result)
-
-    print("Results:", results)
-    print("Master finished.")
-
-
-if __name__ == '__main__':
-    start_master()
+        print("Master finished.")
+        return results

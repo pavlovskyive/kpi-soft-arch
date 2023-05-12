@@ -2,33 +2,51 @@
 
 This repository demonstrates a simple implementation of the Master-Slave pattern in Python. The Master-Slave pattern involves a master component that delegates tasks to one or more slave components, which perform the assigned tasks and return the results to the master.
 
-## Implementation
+## Getting Started
 
-The implementation consists of two main files: `master.py` and `slave.py`.
+To use the Master-Slave pattern in your project, follow these steps:
 
-## `master.py`
+1. Import the `Master` class from master.py and the `Slave` class from `slave.py` into your project.
+2. Create an instance of the `Master` class and configure the tasks to be processed.
+3. Start the master by calling the `process` method, which delegates the tasks to the individual slaves for processing.
+4. Retrieve the results from the master once the processing is complete.
 
-The `master.py` file represents the master component. It contains the `start_master()` function, which is responsible for managing the tasks and coordinating with the slave components. In this example, the master component has a list of tasks and delegates each task to a slave component using the `process_task()` function.
+## Example Usage
 
-To start the master component, run the following command:
+Here's an example usage of the Master-Slave pattern:
 
-```bash
-python3 master.py
+```python
+
+from master import Master
+
+# Create a master instance
+master = Master()
+
+# Configure the tasks to be processed
+tasks = ["Task 1", "Task 2", "Task 3"]
+
+# Process the tasks using the master
+results = master.process(tasks)
+
+# Print the results
+for result in results:
+    print(result)
+
+# Example output:
+# Processed Task 1
+# Processed Task 2
+# Processed Task 3
 ```
 
-The master component prints the results received from the slave components and indicates the completion of the process.
+In this example, we create a `Master` instance and configure the tasks to be processed. We then call the `process` method on the master, which delegates the tasks to individual slaves for processing. The results are collected and returned as a list, which we can then iterate over and process further as needed.
 
-## `slave.py`
+## Running tests
 
-The `slave.py` file represents the slave component. It contains the `process_task()` function, which takes a task as input, simulates the task processing, and returns the result. In this example, the `process_task()` function simply adds a prefix to the task string to indicate that it has been processed by the slave.
+```bash
+sudo chmod +x ./run_tests.sh
+./run_tests.sh
+```
 
-## Usage
-
-1. Run the master component by executing `python3 master.py`.
-2. Observe the master component delegating tasks to the slave component and printing the results received.
-3. Customize the tasks in the tasks list in `master.py` or modify the task processing logic in `slave.py` to suit your needs.
-4. Experiment with different tasks and observe how the master-slave coordination works.
-   
 ## Conclusion
 
-The Master-Slave pattern provides a way to distribute and delegate tasks across multiple components, enabling parallel processing and improving overall system performance. This implementation demonstrates a basic example of the pattern using a master component to delegate tasks to a slave component. You can extend and customize this implementation to suit your specific requirements.
+The Master-Slave pattern is a useful approach for distributing computational tasks and achieving parallel processing. By delegating tasks to individual slaves, the master can efficiently manage the workload and collect the results. This repository provides a basic implementation of the Master-Slave pattern in Python, which can serve as a starting point for more complex distributed computing scenarios.
