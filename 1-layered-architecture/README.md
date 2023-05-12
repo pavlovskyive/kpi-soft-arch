@@ -23,9 +23,16 @@ The current implementation demonstrates a simple application where the presentat
 
 ## Usage
 
-To run the application, execute `python ./presentation_layer/presentation.py` from the command line, while in `1-layered-architecture` subfolder. 
+To run the application, execute `python3 ./presentation_layer/presentation.py` from the command line, while in `1-layered-architecture` subfolder. 
 
 Enter a number when prompted, and the application will display the square of that number.
+
+## Running tests
+
+```bash
+sudo chmod +x ./run_tests.sh
+./run_tests.sh
+```
 
 ## Conclusion
 
