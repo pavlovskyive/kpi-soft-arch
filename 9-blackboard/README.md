@@ -12,11 +12,18 @@ Consider a scenario where multiple knowledge sources contribute their knowledge 
 
 In our example implementation (`blackboard.py`):
 
-- `SourceA` and `SourceB` represent two knowledge sources that contribute their knowledge to the blackboard.
 - The `Blackboard` class provides the shared repository where the knowledge is stored.
-- The `ProblemSolver` class accesses the knowledge from the blackboard and performs problem-solving tasks.
+- The `KnowledgeSource` class represents a knowledge source that updates the blackboard with its knowledge.
+- The `Monitor` class accesses the knowledge from the blackboard and displays it.
 
-To see the Blackboard pattern in action, run the main program (`python3 blackboard.py`), which demonstrates the knowledge sources contributing their knowledge to the blackboard, and the problem solver retrieving and processing the data.
+To see the Blackboard pattern in action, run the main program (`python3 blackboard.py`), which demonstrates the knowledge sources updating the blackboard with their knowledge and the monitor accessing and displaying the knowledge.
+
+## Running tests
+
+```bash
+sudo chmod +x ./run_tests.sh
+./run_tests.sh
+```
 
 ## Benefits of the Blackboard Pattern
 
