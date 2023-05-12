@@ -72,6 +72,13 @@ In this example, we define two filters: `UppercaseFilter`, which converts the in
 
 By using the Pipe-Filter pattern, we can easily extend and modify the pipeline by adding or removing filters, enabling flexible data processing and transformation pipelines.
 
+## Running tests
+
+```bash
+sudo chmod +x ./run_tests.sh
+./run_tests.sh
+```
+
 ## Conclusion
 
 The Pipe-Filter pattern provides a flexible and modular approach to data processing by breaking down complex operations into a series of simple filters connected by pipes.
