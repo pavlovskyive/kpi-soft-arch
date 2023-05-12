@@ -1,4 +1,4 @@
-## KPI -- Software Architecture Course
+## KPI - Software Architecture Course
 
 This repository contains an implementation of various software architecture patterns in Python. It serves as a practical demonstration of these patterns and their application in building robust and scalable software systems.
 
