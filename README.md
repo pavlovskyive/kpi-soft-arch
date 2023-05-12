@@ -9,6 +9,7 @@ This repository contains an implementation of various software architecture patt
 3. [**Master-Slave Pattern:**](3-master-slave) A pattern where a master component delegates tasks to one or more slave components for parallel processing.
 4. [**Pipe-Filter Pattern:**](4-pipe-filter) A pattern, which processes data sequentially through a series of filters connected by pipes, allowing for modular and reusable data transformations.
 5. [**Broker Pattern:**](5-broker) A pattern, which involves a central broker acting as an intermediary for communication and coordination between components. It allows publishers to send messages to specific topics and delivers those messages to subscribers interested in those topics.
+6. [**Peer-to-Peer Pattern:**](6-peer-to-peer) The codebase demonstrates the Peer-to-Peer pattern, a decentralized communication model where all participants (peers) have the same capabilities and can act both as clients and servers. Peers establish direct connections with each other to exchange data or perform distributed tasks without relying on a central server.
 
 ## Usage
 
