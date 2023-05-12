@@ -45,6 +45,13 @@ event_source.generate_event("EventType3", "Event 3 Data")
 
 In this example, an `EventBus` instance is created as the central event bus. An `EventSource` instance is used to generate events and publish them to the event bus. `EventListener` instances are created to subscribe to specific event types and handle the received events. The example showcases the flow of generating events, starting and stopping the listeners, and generating events without listeners for that event type.
 
+## Running tests
+
+```bash
+sudo chmod +x ./run_tests.sh
+./run_tests.sh
+```
+
 # Benefits
 - Loose coupling: Components communicate through events without directly depending on each other, leading to more modular and decoupled systems.
 - Scalability: New components can easily subscribe to existing event types or introduce new event types without impacting the existing components.
