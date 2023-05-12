@@ -33,6 +33,6 @@ Enter an arithmetic expression: 1 2 + 5 +
 Result: 8
 ```
 
-In this example, the expression `"1 2 +"` is interpreted as adding the numbers 1 and 2. The result of the expression is 3.
+In this example, the expression `"1 2 + 5 +"` is interpreted as adding the numbers 1 and 2, and then 5. The result of the expression is 8.
 
 This example showcases how the Interpreter pattern can be used to evaluate expressions in different formats, such as Reverse Polish Notation.
