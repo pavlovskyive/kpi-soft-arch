@@ -6,7 +6,7 @@ The Broker pattern is a messaging pattern that facilitates communication between
 
 The implementation consists of two main components: `Subscriber` and `Broker`. The `Subscriber` class represents the components that can receive messages, while the `Broker` class acts as the central message broker.
 
-The `Subscriber` class has a rec`eive method that stores received messages in a list. The `Broker` class maintains a dictionary of subscribers for each topic. It provides methods to subscribe, unsubscribe, and publish messages to the appropriate subscribers based on the topic.
+The `Subscriber` class has a receive method that stores received messages in a list. The `Broker` class maintains a dictionary of subscribers for each topic. It provides methods to subscribe, unsubscribe, and publish messages to the appropriate subscribers based on the topic.
 
 To showcase the functionality of the Broker pattern, you can run the `broker.py` script. It creates a `Broker` instance, subscribes `Subscriber` objects to topics, publishes messages to topics, and demonstrates the process of subscribing, unsubscribing, and receiving messages.
 
