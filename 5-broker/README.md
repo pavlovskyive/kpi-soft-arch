@@ -1,64 +1,31 @@
 # Broker Pattern
 
-The Broker pattern is a messaging pattern that facilitates communication and coordination between different components in a system. It involves a central broker that acts as an intermediary, receiving messages from publishers and delivering them to subscribers based on predefined topics.
+The Broker pattern is a messaging pattern that facilitates communication between components by using a central broker or mediator. Components can subscribe to specific topics of interest and receive messages published to those topics.
 
 ##Implementation
 
-The implementation of the Broker pattern consists of a `Broker` class that serves as the central messaging broker. The broker maintains a list of subscribers for each topic and provides methods to subscribe to topics and publish messages.
+The implementation consists of two main components: `Subscriber` and `Broker`. The `Subscriber` class represents the components that can receive messages, while the `Broker` class acts as the central message broker.
 
-Here is an example implementation of the Broker pattern (`broker.py`):
+The `Subscriber` class has a rec`eive method that stores received messages in a list. The `Broker` class maintains a dictionary of subscribers for each topic. It provides methods to subscribe, unsubscribe, and publish messages to the appropriate subscribers based on the topic.
 
-```python
-class Broker:
-    def __init__(self):
-        self.subscribers = {}
-
-    def subscribe(self, topic, callback):
-        if topic not in self.subscribers:
-            self.subscribers[topic] = []
-        self.subscribers[topic].append(callback)
-
-    def publish(self, topic, message):
-        if topic in self.subscribers:
-            for callback in self.subscribers[topic]:
-                callback(message)
-```
-
-In this implementation, the `Broker` class has a subscribe method to register callbacks for specific topics and a publish method to send messages to the subscribers of a particular topic.
+To showcase the functionality of the Broker pattern, you can run the `broker.py` script. It creates a `Broker` instance, subscribes `Subscriber` objects to topics, publishes messages to topics, and demonstrates the process of subscribing, unsubscribing, and receiving messages.
 
 ## Usage
+1. Run the `broker.py` script: `python3 broker.py`
+2. The script will create a `Broker` instance and perform the following steps:
+   - Create subscribers (Subscriber objects) with unique names.
+   - Subscribe subscribers to topics of interest using the subscribe method of the Broker.
+   - Publish messages to specific topics using the publish method of the Broker.
+   - Unsubscribe a subscriber from a topic using the unsubscribe method of the Broker.
+   - Check if subscribers receive the messages correctly.
 
-To use the Broker pattern, follow these steps:
+## Running tests
 
-1. reate an instance of the `Broker` class.
-2. Define callback functions that will handle the received messages.
-3. Subscribe the callback functions to specific topics using the `subscribe` method.
-4. Publish messages on topics using the publish method.
-5. 
-Here is an example of how to use the Broker pattern (`broker.py`):
-
-```python
-# Create an instance of the Broker
-broker = Broker()
-
-# Define callback functions
-def callback1(message):
-    print("Received message in callback 1:", message)
-
-def callback2(message):
-    print("Received message in callback 2:", message)
-
-# Subscribe callback functions to topics
-broker.subscribe("topic1", callback1)
-broker.subscribe("topic2", callback2)
-
-# Publish messages on topics
-broker.publish("topic1", "Hello from topic 1")
-broker.publish("topic2", "Hello from topic 2")
+```bash
+sudo chmod +x ./run_tests.sh
+./run_tests.sh
 ```
-
-In this example, we create a `Broke`r instance, define two callback functions `callback1` and `callback2`, and subscribe them to different topics. We then publish messages on the topics, and the respective callback functions are invoked to handle the received messages.
 
 ## Conclusion
 
-The Broker pattern provides a flexible and decoupled way to enable communication and coordination between different components in a system. It allows publishers and subscribers to communicate through a central broker, enabling loose coupling and dynamic messaging.
+The Broker pattern provides a flexible and decoupled approach to handle communication and messaging between components. By centralizing the message exchange in a broker, it enables components to subscribe to specific topics of interest and receive relevant messages. This pattern promotes loose coupling, reusability, and scalability in complex systems.
